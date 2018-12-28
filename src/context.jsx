@@ -12,11 +12,15 @@ export class Provider extends Component {
 
   componentDidMount() {
     axios
-      // chart.tracks Endpoint
       .get(
-        `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=10&country=us&f_has_lyrics=1&apikey=${
+        `https://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=10&country=us&f_has_lyrics=1&apikey=apikey=${
           process.env.REACT_APP_MM_KEY
-        }`
+        }`,
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*"
+          }
+        }
       )
       .then(res => {
         console.log(res.data);
