@@ -1,3 +1,5 @@
+// DIRECT CHILD of App.js (along with Index)
+
 import React, { Component } from "react";
 import axios from "axios";
 import Spinner from "../layout/Spinner.jsx";

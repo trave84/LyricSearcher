@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Consumer } from "../../context";
+import { Consumer } from "../../context"; // BRING IN the Global State here
 import Spinner from "../layout/Spinner.jsx";
 import Track from "./Track.jsx";
 
